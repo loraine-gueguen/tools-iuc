@@ -112,6 +112,18 @@ Trinotate Trinotate.sqlite report -E $report_option.E --pfam_cutoff $report_opti
             <param name="keep_sqlite" value="true" />
             <output name="trinotate_out" file="trinotate_annotation_report_minus_tmhmm_signalp.xls" />
         </test>
+        <test>
+            <param name="trinity" ftype="fasta" value="Trinity.fasta" />
+            <param name="transdecoder" ftype="fasta" value="Trinity.fasta.transdecoder.pep" />
+            <param name="gene_trans_map" ftype="tabular" value="Trinity.fasta.gene_to_trans_map" />
+            <param name="blastp" ftype="tabular" value="swissprot.blastp.outfmt6" />
+            <param name="blastx" ftype="tabular" value="swissprot.blastx.outfmt6" />
+            <param name="hmmscan" ftype="txt" value="TrinotatePFAM.out" />
+            <param name="tmhmm" ftype="tabular" value="tmhmm.out" />
+            <param name="signalp" ftype="tabular" value="signalp.out" />
+            <param name="cond_download.select_download" ftype="select" value="yes" />
+            <output name="trinotate_out" file="trinotate_annotation_report.xls" />
+        </test>
     </tests>
     <help><![CDATA[
 .. class:: infomark
